@@ -20,12 +20,12 @@ before_install:
 - chmod +x gcrsync
 - sudo mv gcrsync /usr/local/bin/
 script:
-  - gcrsync sync --querylimit 20 --processlimit 10 --httptimeout 10s --user ${DOCKER_USER} --password ${DOCKER_PASSWORD} --githubtoken ${GITHUB_TOKEN} --namespace google-containers --githubrepo imdingtalk/change_log
-  - gcrsync sync --querylimit 20 --processlimit 10 --httptimeout 10s --user ${DOCKER_USER} --password ${DOCKER_PASSWORD} --githubtoken ${GITHUB_TOKEN} --namespace kubernetes-helm  --githubrepo imdingtalk/change_log
-  - gcrsync sync --querylimit 20 --processlimit 10 --httptimeout 10s --user ${DOCKER_USER} --password ${DOCKER_PASSWORD} --githubtoken ${GITHUB_TOKEN} --namespace fluentd-elasticsearch --githubrepo imdingtalk/change_log
-  - gcrsync sync --querylimit 20 --processlimit 10 --httptimeout 10s --user ${DOCKER_USER} --password ${DOCKER_PASSWORD} --githubtoken ${GITHUB_TOKEN} --namespace google-samples  --githubrepo imdingtalk/change_log
- # - gcrsync sync --querylimit 20 --processlimit 10 --httptimeout 10s --user ${DOCKER_USER} --password ${DOCKER_PASSWORD} --githubtoken ${GITHUB_TOKEN} --namespace linkerd-io  --githubrepo imdingtalk/change_log
- #  # - gcrsync sync --querylimit 20 --processlimit 10 --httptimeout 10s --user ${DOCKER_USER} --password ${DOCKER_PASSWORD} --githubtoken ${GITHUB_TOKEN} --namespace spinnaker-marketplace  --githubrepo imdingtalk/change_log
- #   # - gcrsync sync --querylimit 20 --processlimit 10 --httptimeout 10s --user ${DOCKER_USER} --password ${DOCKER_PASSWORD} --githubtoken ${GITHUB_TOKEN} --namespace distroless  --githubrepo imdingtalk/change_log
+  - gcrsync sync --querylimit 20 --processlimit 10 --httptimeout 10s --user ${DOCKER_USER} --password ${DOCKER_PASSWORD} --githubtoken ${GITHUB_TOKEN} --namespace google-containers --githubrepo imdingtalk/changelog
+  - gcrsync sync --querylimit 20 --processlimit 10 --httptimeout 10s --user ${DOCKER_USER} --password ${DOCKER_PASSWORD} --githubtoken ${GITHUB_TOKEN} --namespace kubernetes-helm  --githubrepo imdingtalk/changelog
+  - gcrsync sync --querylimit 20 --processlimit 10 --httptimeout 10s --user ${DOCKER_USER} --password ${DOCKER_PASSWORD} --githubtoken ${GITHUB_TOKEN} --namespace fluentd-elasticsearch --githubrepo imdingtalk/changelog
+  - gcrsync sync --querylimit 20 --processlimit 10 --httptimeout 10s --user ${DOCKER_USER} --password ${DOCKER_PASSWORD} --githubtoken ${GITHUB_TOKEN} --namespace google-samples  --githubrepo imdingtalk/changelog
+ # - gcrsync sync --querylimit 20 --processlimit 10 --httptimeout 10s --user ${DOCKER_USER} --password ${DOCKER_PASSWORD} --githubtoken ${GITHUB_TOKEN} --namespace linkerd-io  --githubrepo imdingtalk/changelog
+ #  # - gcrsync sync --querylimit 20 --processlimit 10 --httptimeout 10s --user ${DOCKER_USER} --password ${DOCKER_PASSWORD} --githubtoken ${GITHUB_TOKEN} --namespace spinnaker-marketplace  --githubrepo imdingtalk/changelog
+ #   # - gcrsync sync --querylimit 20 --processlimit 10 --httptimeout 10s --user ${DOCKER_USER} --password ${DOCKER_PASSWORD} --githubtoken ${GITHUB_TOKEN} --namespace distroless  --githubrepo imdingtalk/changelog
  #   notifications:
  #     webhooks: https://oapi.dingtalk.com/robot/send?access_token=65045307f13a1619c979eb035c5c0c75a497581a4f8d531c820706f3e9286a4c
