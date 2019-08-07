@@ -9,10 +9,11 @@ trigger:
   - push
 steps:
 - name: prepare
-  image: docker:19.03.1
+  image: docker
   commands:
   - wget https://github.com/mritd/gcrsync/releases/download/v1.3.2/gcrsync_linux_amd64
   - mv gcrsync_linux_amd64 gcrsync
   - chmod +x gcrsync
   - mv gcrsync /usr/local/bin/
+  - sleep 5
   - docker ps
