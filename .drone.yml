@@ -2,6 +2,12 @@ kind: pipeline
 name: test
 clone:
   depth: 50
+trigger:
+  branch:
+  - master
+  event:
+  - push
+
 steps:
 - name: build
   image: golang
