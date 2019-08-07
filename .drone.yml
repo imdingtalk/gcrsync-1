@@ -9,9 +9,12 @@ trigger:
   - push
 
 steps:
-- name: build
+- name: before_install
   image: golang
   commands:
-  - ls -l
+  - wget https://github.com/mritd/gcrsync/releases/download/v1.3.2/gcrsync_linux_amd64
+  - sudo mv gcrsync_linux_amd64 gcrsync
+  - chmod +x gcrsync
+  - sudo mv gcrsync /usr/local/bin/
 
 
