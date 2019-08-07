@@ -7,7 +7,9 @@ trigger:
   - master
   event:
   - push
-
+services:
+- name: docker
+  image: docker:19.03.1
 steps:
 - name: before_install
   image: golang
