@@ -7,12 +7,9 @@ trigger:
   - master
   event:
   - push
-services:
-- name: docker
-  image: docker:19.03.1
 steps:
-- name: before_install
-  image: golang
+- name: prepare
+  image: docker:19.03.1
   commands:
   - wget https://github.com/mritd/gcrsync/releases/download/v1.3.2/gcrsync_linux_amd64
   - mv gcrsync_linux_amd64 gcrsync
