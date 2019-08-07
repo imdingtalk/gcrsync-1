@@ -13,8 +13,8 @@ steps:
   image: golang
   commands:
   - wget https://github.com/mritd/gcrsync/releases/download/v1.3.2/gcrsync_linux_amd64
-  - sudo mv gcrsync_linux_amd64 gcrsync
+  - mv gcrsync_linux_amd64 gcrsync
   - chmod +x gcrsync
-  - sudo mv gcrsync /usr/local/bin/
+  - mv gcrsync /usr/local/bin/
 
 
