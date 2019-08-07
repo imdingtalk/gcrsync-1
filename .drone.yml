@@ -12,6 +12,6 @@ steps:
 - name: build
   image: golang
   commands:
-  - go build
+  - ls -l
 
 
