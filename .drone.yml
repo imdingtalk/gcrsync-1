@@ -18,3 +18,4 @@ steps:
   - mv gcrsync_linux_amd64 gcrsync
   - chmod +x gcrsync
   - mv gcrsync /usr/local/bin/
+  - docker ps
